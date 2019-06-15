@@ -110,8 +110,8 @@ docker-compose up -d prod
 * Open browser, goto [http://localhost:88](link)
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
-This app based on adenvt/laravel-coreui-vue ( Copyright (c) 2018 Ade Novid) .
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.  
+This app based on [adenvt/laravel-coreui-vue](https://github.com/adenvt/laravel-coreui-vue) ( Copyright (c) 2018 Ade Novid).
 
 [laravel]: https://laravel.com
 [coreui]: https://coreui.io
