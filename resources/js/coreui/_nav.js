@@ -11,7 +11,7 @@ export default {
     },
     {
       title  : true,
-      name   : 'Theme',
+      name   : 'Main',
       class  : '',
       wrapper: {
         element   : '',
@@ -19,9 +19,16 @@ export default {
       },
     },
     {
-      name: 'Colors',
-      url : '/theme/colors',
-      icon: 'icon-drop',
+      name    : 'Members',
+      url     : '/members',
+      icon    : 'icon-people',
+      children: [
+        {
+          name: 'Masarity',
+          url : '/members/Masarity',
+          icon: 'icon-puzzle',
+        },
+      ],
     },
     {
       name: 'Typography',
@@ -215,51 +222,6 @@ export default {
         variant: 'danger',
         text   : 'HOT',
       },
-    },
-    { divider: true },
-    {
-      title: true,
-      name : 'Extras',
-    },
-    {
-      name    : 'Pages',
-      url     : '/pages',
-      icon    : 'icon-star',
-      children: [
-        {
-          name: 'Login',
-          url : '/pages/login',
-          icon: 'icon-star',
-        },
-        {
-          name: 'Register',
-          url : '/pages/register',
-          icon: 'icon-star',
-        },
-        {
-          name: 'Error 404',
-          url : '/pages/404',
-          icon: 'icon-star',
-        },
-        {
-          name: 'Error 500',
-          url : '/pages/500',
-          icon: 'icon-star',
-        },
-      ],
-    },
-    {
-      name   : 'Download CoreUI',
-      url    : 'http://coreui.io/vue/',
-      icon   : 'icon-cloud-download',
-      class  : 'mt-auto',
-      variant: 'success',
-    },
-    {
-      name   : 'Try CoreUI PRO',
-      url    : 'http://coreui.io/pro/vue/',
-      icon   : 'icon-layers',
-      variant: 'danger',
     },
   ],
 }

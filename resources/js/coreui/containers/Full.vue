@@ -16,7 +16,6 @@
           <router-view />
         </div>
       </main>
-      <app-aside />
     </div>
     <app-footer />
   </div>
@@ -24,14 +23,13 @@
 
 <script>
 import nav from '../_nav'
-import { Header as AppHeader, Sidebar, Aside as AppAside, Footer as AppFooter, Breadcrumb } from '../components'
+import { Header as AppHeader, Sidebar, Footer as AppFooter, Breadcrumb } from '../components'
 
 export default {
   name      : 'Full',
   components: {
     AppHeader,
     Sidebar,
-    AppAside,
     AppFooter,
     Breadcrumb,
   },

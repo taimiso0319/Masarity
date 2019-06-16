@@ -30,30 +30,8 @@
       </b-nav-item>
     </b-navbar-nav>
     <b-navbar-nav class="ml-auto">
-      <b-nav-item class="d-md-down-none">
-        <i class="icon-bell" />
-        <b-badge
-          pill
-          variant="danger"
-        >
-          5
-        </b-badge>
-      </b-nav-item>
-      <b-nav-item class="d-md-down-none">
-        <i class="icon-list" />
-      </b-nav-item>
-      <b-nav-item class="d-md-down-none">
-        <i class="icon-location-pin" />
-      </b-nav-item>
-      <header-dropdown />
+      <!--header-dropdown /-->
     </b-navbar-nav>
-    <button
-      class="navbar-toggler aside-menu-toggler d-md-down-none"
-      type="button"
-      @click="asideToggle"
-    >
-      <span class="navbar-toggler-icon" />
-    </button>
   </header>
 </template>
 <script>
@@ -87,11 +65,17 @@ export default {
       event.preventDefault()
       document.body.classList.toggle('sidebar-mobile-show')
     },
-    asideToggle (event) {
-      event.preventDefault()
-      document.body.classList.toggle('aside-menu-hidden')
-    },
   },
 }
 
 </script>
+
+<style scoped>
+  .navbar-brand{
+    -webkit-background-size: 100px auto !important;
+    background-size: 100px auto !important;
+  }
+  .navbar-toggler{
+    margin-left: 10px;
+  }
+</style>
