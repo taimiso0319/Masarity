@@ -19,17 +19,11 @@ export default {
       },
     },
     {
-      name    : 'Members',
-      url     : '/members',
-      icon    : 'icon-people',
-      children: [
-        {
-          name: 'Masarity',
-          url : '/members/Masarity',
-          icon: 'icon-puzzle',
-        },
-      ],
+      name: 'Members',
+      url : '/members',
+      icon: 'icon-people',
     },
+    /*
     {
       name: 'Typography',
       url : '/theme/typography',
@@ -223,5 +217,6 @@ export default {
         text   : 'HOT',
       },
     },
+     */
   ],
 }

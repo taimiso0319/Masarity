@@ -15,6 +15,7 @@ import Register from '@/views/pages/Register'
 
 // Sample route
 import sample from './sample'
+import main from './main'
 
 Vue.use(Router)
 
@@ -35,6 +36,7 @@ export default new Router({
           component: Dashboard,
         },
         ...sample,
+        ...main,
       ],
     },
     {
