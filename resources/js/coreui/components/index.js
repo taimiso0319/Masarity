@@ -5,7 +5,7 @@ import Footer from './Footer.vue'
 import Header from './Header/Header.vue'
 import Sidebar from './Sidebar/Sidebar.vue'
 import Switch from './Switch.vue'
-
+import MemberProfileCard from './Members/MemberProfileCard.vue'
 export {
   Breadcrumb,
   Callout,
@@ -13,4 +13,5 @@ export {
   Header,
   Sidebar,
   Switch,
+  MemberProfileCard,
 }

@@ -35,12 +35,12 @@
   </header>
 </template>
 <script>
-import HeaderDropdown from './HeaderDropdown.vue'
+// import HeaderDropdown from './HeaderDropdown.vue'
 
 export default {
-  name      : 'CHeader',
-  components: { HeaderDropdown },
-  props     : {
+  name : 'CHeader',
+  // components: { HeaderDropdown },
+  props: {
     fixed: {
       type   : Boolean,
       default: true,
