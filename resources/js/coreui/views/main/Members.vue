@@ -110,6 +110,13 @@ export default {
           description : '洋ゲーとソシャゲとTRPG 綾瀬穂乃香ちゃん 木村龍くん 徳川まつりちゃん',
         },
         {
+          name        : 'くれてぃ',
+          bannerUrl   : 'https://pbs.twimg.com/profile_banners/67184670/1535638049/600x200',
+          twitterUrl  : 'https://twitter.com/Kurety',
+          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1097087025688133633/LW1RhFsj_200x200.png',
+          description : 'このアイコンはくまみね様(@kumamine)の作品の電話猫です',
+        },
+        {
           name        : 'Yの者',
           bannerUrl   : 'https://pbs.twimg.com/profile_banners/153415601/1397756196/600x200',
           twitterUrl  : 'https://twitter.com/taimiso0319',
