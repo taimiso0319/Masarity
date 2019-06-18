@@ -22,11 +22,20 @@
       <b-nav-item class="px-3">
         Dashboard
       </b-nav-item>
-      <b-nav-item class="px-3">
-        Users
+      <b-nav-item class="px-2">
+        <a href="https://colopl.co.jp/alicegearaegis/">
+          <b-img class="app-icons rounded" src="https://colopl.co.jp/alicegearaegis/portal/img/common/ft_icon.jpg"/>
+        </a>
       </b-nav-item>
-      <b-nav-item class="px-3">
-        Settings
+      <b-nav-item class="px-2">
+        <a href="https://apps.pmang.jp/browndust">
+          <b-img class="app-icons rounded" src="https://review.game-apps.info/wp-content/uploads/2019/05/icon_browndust.jpg"/>
+        </a>
+      </b-nav-item>
+      <b-nav-item class="px-2">
+        <a href="https://colopl.co.jp/panipani/">
+          <b-img class="app-icons rounded" src="https://pbs.twimg.com/profile_images/905682957532225536/KoCd3GQR_400x400.jpg"/>
+        </a>
       </b-nav-item>
     </b-navbar-nav>
     <b-navbar-nav class="ml-auto">
@@ -71,6 +80,9 @@ export default {
 </script>
 
 <style scoped>
+  .app-icons{
+    width: 42px;
+  }
   .navbar-brand{
     -webkit-background-size: 100px auto !important;
     background-size: 100px auto !important;

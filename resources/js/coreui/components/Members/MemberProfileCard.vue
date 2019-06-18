@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-profile text-center">
+  <div class="card card-profile text-center d-inline-block">
     <img
       alt=""
       class="card-img-top"

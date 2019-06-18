@@ -4,10 +4,6 @@ export default {
       name : 'Dashboard',
       url  : '/dashboard',
       icon : 'icon-speedometer',
-      badge: {
-        variant: 'primary',
-        text   : 'NEW',
-      },
     },
     {
       title  : true,
@@ -22,6 +18,10 @@ export default {
       name: 'Members',
       url : '/members',
       icon: 'icon-people',
+      badge: {
+        variant: 'primary',
+        text   : 'NEW',
+      },
     },
     /*
     {
