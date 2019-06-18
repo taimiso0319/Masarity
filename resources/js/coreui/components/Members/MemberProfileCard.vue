@@ -6,11 +6,14 @@
       :src="this.bannerUrl"
     >
     <div class="card-block">
+      <a
+        :href="this.twitterUrl"
+      >
       <img
         alt=""
         class="card-img-profile"
         :src="this.thumbnailUrl"
-      >
+      ></a>
       <h4 class="card-title">
         {{this.name}}
         <small>{{this.description}}</small>
