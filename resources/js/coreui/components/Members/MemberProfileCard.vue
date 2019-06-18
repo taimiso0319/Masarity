@@ -8,6 +8,7 @@
     <div class="card-block">
       <a
         :href="this.twitterUrl"
+        target="_blank"
       >
       <img
         alt=""
@@ -22,6 +23,7 @@
         <a
           class="fa fa-twitter"
           :href="this.twitterUrl"
+          target="_blank"
         />
       </div>
     </div>
