@@ -3,30 +3,22 @@
     <img
       alt=""
       class="card-img-top"
-      src="https://unsplash.it/340/160?image=354"
+      :src="this.bannerUrl"
     >
     <div class="card-block">
       <img
         alt=""
         class="card-img-profile"
-        src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140"
+        :src="this.thumbnailUrl"
       >
       <h4 class="card-title">
-        Nicola Pressi
-        <small>Front-end designer</small>
+        {{this.name}}
+        <small>{{this.description}}</small>
       </h4>
       <div class="card-links">
         <a
-          class="fa fa-dribbble"
-          href="#"
-        />
-        <a
           class="fa fa-twitter"
-          href="#"
-        />
-        <a
-          class="fa fa-facebook"
-          href="#"
+          :href="this.twitterUrl"
         />
       </div>
     </div>
@@ -34,7 +26,16 @@
 </template>
 
 <script>
-export default { name: 'MemberProfileCard' }
+export default {
+  name : 'MemberProfileCard',
+  props: {
+    thumbnailUrl: String,
+    bannerUrl   : String,
+    twitterUrl  : String,
+    name        : String,
+    description : String,
+  },
+}
 </script>
 
 <style scoped lang="scss">
@@ -44,18 +45,22 @@ export default { name: 'MemberProfileCard' }
   $facebook-color: #3b5999;
 
   .card-profile {
-    width: 340px;
+    max-width: 350px;
     margin: 20px 10px;
     background-color: $card-bg;
     border-radius: 0;
     border: 0;
-    box-shadow: 1em 1em 2em rgba(0,0,0,.2);
 
     .card-img-top {
       border-radius: 0;
+      min-height: 120px;
     }
 
+    .card-block{
+      min-height: 252px;
+    }
     .card-img-profile {
+      width: 130px;
       max-width: 100%;
       border-radius: 50%;
       margin-top: -95px;
@@ -67,6 +72,7 @@ export default { name: 'MemberProfileCard' }
       margin-bottom: 50px;
 
       small {
+        min-height: 30px;
         display: block;
         font-size: .6em;
         margin-top: .2em;
