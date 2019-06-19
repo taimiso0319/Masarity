@@ -152,7 +152,7 @@ export default {
           bannerUrl   : 'https://pbs.twimg.com/profile_banners/1029658856467574785/1556747403/600x200',
           thumbnailUrl: 'https://pbs.twimg.com/profile_images/1123706125835227138/eCo67Nd3_200x200.jpg',
           twitterUrl  : 'https://twitter.com/yagami407',
-          youtubeUrl  : 'https://www.youtube.com/watch?v=rYWeQnhZ1Fw',
+          youtubeUrl  : 'https://www.youtube.com/channel/UCRCKmnkNgfSJnYbzie4LZ0w',
           description : '新人Vtuberの八神・R・陽奈です！これから頑張ります！乾坤一擲！',
         },
         {

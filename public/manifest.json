@@ -5,12 +5,7 @@
     {
       "src": "/images/logo-symbol.png",
       "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "/images/logo-symbol.png",
-      "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "100x100"
     }
   ],
   "start_url": "/",
