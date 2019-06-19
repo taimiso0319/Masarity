@@ -10,7 +10,7 @@
 @import 'bootstrap-variables';
 
 // Override Vendor variable
-$fa-font-path: '~font-awesome/fonts/';
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 $simple-line-font-path: '~simple-line-icons/fonts/';
 
 // Import Bootstrap source files
@@ -19,7 +19,10 @@ $simple-line-font-path: '~simple-line-icons/fonts/';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~bootstrap-vue/dist/bootstrap-vue.css';
-@import '~font-awesome/css/font-awesome.min.css';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~simple-line-icons/css/simple-line-icons.css';
 @import '~select2/dist/css/select2.css';
 @import '~select2-bootstrap4-theme/dist/select2-bootstrap4.css';
