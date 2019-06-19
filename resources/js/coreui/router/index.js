@@ -8,6 +8,7 @@ import Full from '@/containers/Full'
 import Dashboard from '@/views/sample/Dashboard'
 
 // Views - Pages
+import Entrance from '../views/main/Entrance'
 import Page404 from '@/views/pages/Page404'
 import Page500 from '@/views/pages/Page500'
 import Login from '@/views/pages/Login'
@@ -25,9 +26,15 @@ export default new Router({
   scrollBehavior : () => ({ y: 0 }),
   routes         : [
     {
+      path     : '/entrance',
+      redirect : '/entrance',
+      name     : 'Entrance',
+      component: Entrance,
+    },
+    {
       path     : '/',
       redirect : '/dashboard',
-      name     : 'Home',
+      name     : 'Dashboard',
       component: Full,
       children : [
         {

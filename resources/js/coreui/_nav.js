@@ -1,9 +1,9 @@
 export default {
   items: [
     {
-      name : 'Dashboard',
-      url  : '/dashboard',
-      icon : 'icon-speedometer',
+      name: 'Dashboard',
+      url : '/dashboard',
+      icon: 'icon-speedometer',
     },
     {
       title  : true,
@@ -15,15 +15,55 @@ export default {
       },
     },
     {
-      name: 'Members',
-      url : '/members',
-      icon: 'icon-people',
+      name : 'Members',
+      url  : '/members',
+      icon : 'icon-people',
       badge: {
         variant: 'primary',
         text   : 'NEW',
       },
     },
+    {
+      name : 'History',
+      url  : '/history',
+      icon : 'icon-film',
+      badge: {
+        variant: 'danger',
+        text   : 'WIP',
+      },
+    },
+    {
+      title  : true,
+      name   : 'Trash Box',
+      class  : '',
+      wrapper: {
+        element   : '',
+        attributes: {},
+      },
+    },
     /*
+    {
+      name : 'ソシャゲ',
+      url  : '/games',
+      icon : 'icon-screen-smartphone',
+      badge: {
+        variant: 'danger',
+        text   : 'HOT',
+      },
+
+      children: [
+        {
+          name: 'アリスギアアイギス',
+          url : '/base/breadcrumbs',
+          icon: 'icon-screen-smartphone',
+        },
+        {
+          name: 'デレステ',
+          url : '/base/cards',
+          icon: 'icon-screen-smartphone',
+        },
+      ]
+    },
     {
       name: 'Typography',
       url : '/theme/typography',
