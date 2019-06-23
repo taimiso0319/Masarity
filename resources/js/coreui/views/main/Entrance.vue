@@ -270,7 +270,7 @@
 </template>
 
 <script>
-  import * as THREE from 'THREE'
+  import * as THREE from 'three'
   export default {
     name: 'Entrance',
     data () {
