@@ -2,22 +2,22 @@
 <template>
   <div>
     <a href="/members" class="member-link"><i class="fas fa-dungeon"></i></a>
-  <div
-    id="container"
-    touch-action="none"
-  >
-    <script
-      id="vertexShader"
-      type="x-shader/x-vertex"
+    <div
+      id="container"
+      touch-action="none"
     >
+      <script
+        id="vertexShader"
+        type="x-shader/x-vertex"
+      >
       void main() {
       gl_Position = vec4( position, 1.0 );
       }
     </script>
-    <script
-      id="fragmentShader"
-      type="x-shader/x-fragment"
-    >
+      <script
+        id="fragmentShader"
+        type="x-shader/x-fragment"
+      >
       uniform vec2 u_resolution;
       uniform vec3 u_mouse;
       uniform float u_time;
@@ -265,191 +265,192 @@
       gl_FragColor = fragcolour ;
       }
     </script>
-  </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'Entrance',
-  data () {
-    return {
-      container      : null,
-      composer       : null,
-      camera         : null,
-      scene          : null,
-      renderer       : null,
-      uniforms       : null,
-      divisor        : 1 / 8,
-      textureFraction: 1 / 1,
-      newmouse       : {
-        x: 0,
-        y: 0,
-      },
-      loader     : null,
-      texture    : null,
-      rtTexture  : null,
-      rtTexture2 : null,
-      environment: null,
-      pooltex    : null,
+  import * as THREE from 'THREE'
+  export default {
+    name: 'Entrance',
+    data () {
+      return {
+        container      : null,
+        composer       : null,
+        camera         : null,
+        scene          : null,
+        renderer       : null,
+        uniforms       : null,
+        divisor        : 1 / 8,
+        textureFraction: 1 / 1,
+        newmouse       : {
+          x: 0,
+          y: 0,
+        },
+        loader     : null,
+        texture    : null,
+        rtTexture  : null,
+        rtTexture2 : null,
+        environment: null,
+        pooltex    : null,
 
-      then: 0,
+        then: 0,
 
-      beta: Math.random() * -1000,
-    }
-  },
-  mounted () {
-    this.loader =  new THREE.TextureLoader()
-    this.loader.setCrossOrigin('anonymous')
-    this.loader.load(
-      'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/noise.png',
-      (tex) => {
-        this.texture           = tex
-        this.texture.wrapS     = THREE.RepeatWrapping
-        this.texture.wrapT     = THREE.RepeatWrapping
-        this.texture.minFilter = THREE.LinearFilter
-        this.loader.load(
-          'https://i.imgur.com/RPE4tk0.png',
-          (tex) => {
-            this.environment           = tex
-            this.environment.minFilter = THREE.NearestMipMapNearestFilter
-
-            this.loader.load(
-              'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/tiling-mosaic.jpg',
-              (tex) => {
-                this.pooltex           = tex
-                this.pooltex.wrapS     = THREE.RepeatWrapping
-                this.pooltex.wrapT     = THREE.RepeatWrapping
-                this.pooltex.minFilter = THREE.NearestMipMapNearestFilter
-
-                this.init()
-                this.animate()
-                window.addEventListener('resize', this.onResize)
-              }
-            )
-          }
-        )
+        beta: Math.random() * -1000,
       }
-    )
-  },
-  methods: {
-    init: function () {
-      $('body').addClass('m-0')
-      $('body').addClass('overflow-hidden')
-      this.container         = document.querySelector('#container')
-      this.camera            = new THREE.Camera()
-      this.camera.position.z = 1
-      this.scene             = new THREE.Scene()
+    },
+    mounted () {
+      this.loader =  new THREE.TextureLoader()
+      this.loader.setCrossOrigin('anonymous')
+      this.loader.load(
+        'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/noise.png',
+        (tex) => {
+          this.texture           = tex
+          this.texture.wrapS     = THREE.RepeatWrapping
+          this.texture.wrapT     = THREE.RepeatWrapping
+          this.texture.minFilter = THREE.LinearFilter
+          this.loader.load(
+            'https://i.imgur.com/RPE4tk0.png',
+            (tex) => {
+              this.environment           = tex
+              this.environment.minFilter = THREE.NearestMipMapNearestFilter
 
-      const geometry = new THREE.PlaneBufferGeometry(2, 2)
+              this.loader.load(
+                'https://s3-us-west-2.amazonaws.com/s.cdpn.io/982762/tiling-mosaic.jpg',
+                (tex) => {
+                  this.pooltex           = tex
+                  this.pooltex.wrapS     = THREE.RepeatWrapping
+                  this.pooltex.wrapT     = THREE.RepeatWrapping
+                  this.pooltex.minFilter = THREE.NearestMipMapNearestFilter
 
-      this.rtTexture  = new THREE.WebGLRenderTarget(Math.floor(window.innerWidth * this.textureFraction), Math.floor(window.innerHeight * this.textureFraction), { type: THREE.FloatType, minFilter: THREE.NearestMipMapNearestFilter })
-      this.rtTexture2 = new THREE.WebGLRenderTarget(Math.floor(window.innerWidth * this.textureFraction), Math.floor(window.innerHeight * this.textureFraction), { type: THREE.FloatType, minFilter: THREE.NearestMipMapNearestFilter })
+                  this.init()
+                  this.animate()
+                  window.addEventListener('resize', this.onResize)
+                }
+              )
+            }
+          )
+        }
+      )
+    },
+    methods: {
+      init: function () {
+        $('body').addClass('m-0')
+        $('body').addClass('overflow-hidden')
+        this.container         = document.querySelector('#container')
+        this.camera            = new THREE.Camera()
+        this.camera.position.z = 1
+        this.scene             = new THREE.Scene()
 
-      this.uniforms = {
-        u_time       : { type: 'f', value: 1 },
-        u_resolution : { type: 'v2', value: new THREE.Vector2() },
-        u_noise      : { type: 't', value: this.texture },
-        u_buffer     : { type: 't', value: this.rtTexture.texture },
-        u_texture    : { type: 't', value: this.pooltex },
-        u_environment: { type: 't', value: this.environment },
-        u_mouse      : { type: 'v3', value: new THREE.Vector3() },
-        u_frame      : { type: 'i', value: -1 },
-        u_renderpass : { type: 'b', value: false },
-      }
+        const geometry = new THREE.PlaneBufferGeometry(2, 2)
 
-      const material                  = new THREE.ShaderMaterial({
-        uniforms      : this.uniforms,
-        vertexShader  : document.querySelector('#vertexShader').textContent,
-        fragmentShader: document.querySelector('#fragmentShader').textContent,
-      })
-      material.extensions.derivatives = true
+        this.rtTexture  = new THREE.WebGLRenderTarget(Math.floor(window.innerWidth * this.textureFraction), Math.floor(window.innerHeight * this.textureFraction), { type: THREE.FloatType, minFilter: THREE.NearestMipMapNearestFilter })
+        this.rtTexture2 = new THREE.WebGLRenderTarget(Math.floor(window.innerWidth * this.textureFraction), Math.floor(window.innerHeight * this.textureFraction), { type: THREE.FloatType, minFilter: THREE.NearestMipMapNearestFilter })
 
-      const mesh = new THREE.Mesh(geometry, material)
-      this.scene.add(mesh)
-
-      this.renderer = new THREE.WebGLRenderer()
-
-      // renderer.setPixelRatio( window.devicePixelRatio );
-
-      this.container.append(this.renderer.domElement)
-
-      this.onWindowResize()
-      window.addEventListener('resize', this.onWindowResize, false)
-
-      document.addEventListener('pointermove', (event) => {
-        const ratio = window.innerHeight / window.innerWidth
-        if (window.innerHeight > window.innerWidth) {
-          this.newmouse.x = (event.pageX - window.innerWidth / 2) / window.innerWidth
-          this.newmouse.y = (event.pageY - window.innerHeight / 2) / window.innerHeight * -1 * ratio
-        } else {
-          this.newmouse.x = (event.pageX - window.innerWidth / 2) / window.innerWidth / ratio
-          this.newmouse.y = (event.pageY - window.innerHeight / 2) / window.innerHeight * -1
+        this.uniforms = {
+          u_time       : { type: 'f', value: 1 },
+          u_resolution : { type: 'v2', value: new THREE.Vector2() },
+          u_noise      : { type: 't', value: this.texture },
+          u_buffer     : { type: 't', value: this.rtTexture.texture },
+          u_texture    : { type: 't', value: this.pooltex },
+          u_environment: { type: 't', value: this.environment },
+          u_mouse      : { type: 'v3', value: new THREE.Vector3() },
+          u_frame      : { type: 'i', value: -1 },
+          u_renderpass : { type: 'b', value: false },
         }
 
-        event.preventDefault()
-      })
-      document.addEventListener('pointerdown', () => {
-        this.uniforms.u_mouse.value.z = 1
-      })
-      document.addEventListener('pointerup', () => {
-        this.uniforms.u_mouse.value.z = 0
-      })
+        const material                  = new THREE.ShaderMaterial({
+          uniforms      : this.uniforms,
+          vertexShader  : document.querySelector('#vertexShader').textContent,
+          fragmentShader: document.querySelector('#fragmentShader').textContent,
+        })
+        material.extensions.derivatives = true
+
+        const mesh = new THREE.Mesh(geometry, material)
+        this.scene.add(mesh)
+
+        this.renderer = new THREE.WebGLRenderer()
+
+        // renderer.setPixelRatio( window.devicePixelRatio );
+
+        this.container.append(this.renderer.domElement)
+
+        this.onWindowResize()
+        window.addEventListener('resize', this.onWindowResize, false)
+
+        document.addEventListener('pointermove', (event) => {
+          const ratio = window.innerHeight / window.innerWidth
+          if (window.innerHeight > window.innerWidth) {
+            this.newmouse.x = (event.pageX - window.innerWidth / 2) / window.innerWidth
+            this.newmouse.y = (event.pageY - window.innerHeight / 2) / window.innerHeight * -1 * ratio
+          } else {
+            this.newmouse.x = (event.pageX - window.innerWidth / 2) / window.innerWidth / ratio
+            this.newmouse.y = (event.pageY - window.innerHeight / 2) / window.innerHeight * -1
+          }
+
+          event.preventDefault()
+        })
+        document.addEventListener('pointerdown', () => {
+          this.uniforms.u_mouse.value.z = 1
+        })
+        document.addEventListener('pointerup', () => {
+          this.uniforms.u_mouse.value.z = 0
+        })
+      },
+      onWindowResize: function (event) {
+        this.renderer.setSize(window.innerWidth, window.innerHeight)
+        this.uniforms.u_resolution.value.x =  this.renderer.domElement.width
+        this.uniforms.u_resolution.value.y =  this.renderer.domElement.height
+
+        this.rtTexture  = new THREE.WebGLRenderTarget(window.innerWidth * this.textureFraction - 1, window.innerHeight * this.textureFraction)
+        this.rtTexture2 = new THREE.WebGLRenderTarget(window.innerWidth * this.textureFraction, window.innerHeight * this.textureFraction)
+
+        this.uniforms.u_frame.value = -1
+      },
+      animate: function (delta) {
+        window.requestAnimationFrame(this.animate)
+        this.render(delta)
+      },
+      render: function (delta) {
+        this.uniforms.u_frame.value++
+
+        this.uniforms.u_mouse.value.x += (this.newmouse.x - this.uniforms.u_mouse.value.x) * this.divisor
+        this.uniforms.u_mouse.value.y += (this.newmouse.y - this.uniforms.u_mouse.value.y) * this.divisor
+
+        this.uniforms.u_time.value = this.beta + delta * 0.0005
+        this.renderer.clear()
+        this.renderer.render(this.scene, this.camera)
+        this.renderTexture()
+      },
+      renderTexture: function (delta) {
+        // let ov = uniforms.u_buff.value;
+
+        const odims                        =  this.uniforms.u_resolution.value.clone()
+        // this.uniforms.u_resolution.value.x = window.innerWidth * this.textureFraction
+        // this.uniforms.u_resolution.value.y = window.innerHeight * this.textureFraction
+        this.uniforms.u_buffer.value       = this.rtTexture2.texture
+
+        // this.uniforms.u_renderpass.value = true
+
+        //   rtTexture = rtTexture2;
+        //   rtTexture2 = buffer;
+        // console.log(this.rtTexture)
+        window.rtTexture =  this.rtTexture2
+        // this.renderer.clear()
+        // this.renderer.setRenderTarget(window.rtTexture)
+        this.renderer.render(this.scene, this.camera)
+        const buffer    =  this.rtTexture
+        this.rtTexture  =  this.rtTexture2
+        this.rtTexture2 = buffer
+
+        // uniforms.u_buff.value = ov;
+
+        this.uniforms.u_buffer.value     =  this.rtTexture.texture
+        this.uniforms.u_resolution.value = odims
+        this.uniforms.u_renderpass.value = false
+      },
     },
-    onWindowResize: function (event) {
-      this.renderer.setSize(window.innerWidth, window.innerHeight)
-      this.uniforms.u_resolution.value.x =  this.renderer.domElement.width
-      this.uniforms.u_resolution.value.y =  this.renderer.domElement.height
-
-      this.rtTexture  = new THREE.WebGLRenderTarget(window.innerWidth * this.textureFraction - 1, window.innerHeight * this.textureFraction)
-      this.rtTexture2 = new THREE.WebGLRenderTarget(window.innerWidth * this.textureFraction, window.innerHeight * this.textureFraction)
-
-      this.uniforms.u_frame.value = -1
-    },
-    animate: function (delta) {
-      window.requestAnimationFrame(this.animate)
-      this.render(delta)
-    },
-    render: function (delta) {
-      this.uniforms.u_frame.value++
-
-      this.uniforms.u_mouse.value.x += (this.newmouse.x - this.uniforms.u_mouse.value.x) * this.divisor
-      this.uniforms.u_mouse.value.y += (this.newmouse.y - this.uniforms.u_mouse.value.y) * this.divisor
-
-      this.uniforms.u_time.value = this.beta + delta * 0.0005
-      this.renderer.clear()
-      this.renderer.render(this.scene, this.camera)
-      this.renderTexture()
-    },
-    renderTexture: function (delta) {
-      // let ov = uniforms.u_buff.value;
-
-      const odims                        =  this.uniforms.u_resolution.value.clone()
-      // this.uniforms.u_resolution.value.x = window.innerWidth * this.textureFraction
-      // this.uniforms.u_resolution.value.y = window.innerHeight * this.textureFraction
-      this.uniforms.u_buffer.value       = this.rtTexture2.texture
-
-      // this.uniforms.u_renderpass.value = true
-
-      //   rtTexture = rtTexture2;
-      //   rtTexture2 = buffer;
-      // console.log(this.rtTexture)
-      window.rtTexture =  this.rtTexture2
-      // this.renderer.clear()
-      // this.renderer.setRenderTarget(window.rtTexture)
-      this.renderer.render(this.scene, this.camera)
-      const buffer    =  this.rtTexture
-      this.rtTexture  =  this.rtTexture2
-      this.rtTexture2 = buffer
-
-      // uniforms.u_buff.value = ov;
-
-      this.uniforms.u_buffer.value     =  this.rtTexture.texture
-      this.uniforms.u_resolution.value = odims
-      this.uniforms.u_renderpass.value = false
-    },
-  },
-}
+  }
 </script>
 
 <style scoped lasn="scss">
