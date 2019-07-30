@@ -40,7 +40,6 @@ try {
       return this
     },
   })
-
   require('bootstrap')
   require('select2')
   require('offline-plugin/runtime').install()

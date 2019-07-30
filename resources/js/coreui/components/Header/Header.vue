@@ -19,9 +19,6 @@
       <span class="navbar-toggler-icon" />
     </button>
     <b-navbar-nav class="d-md-down-none">
-      <b-nav-item class="px-3">
-        Dashboard
-      </b-nav-item>
       <b-nav-item href="https://colopl.co.jp/alicegearaegis/" target="_blank" class="px-2">
           <b-img class="app-icons rounded" src="https://colopl.co.jp/alicegearaegis/portal/img/common/ft_icon.jpg"/>
       </b-nav-item>
