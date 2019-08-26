@@ -29,12 +29,28 @@ export default {
     },
     {
       title  : true,
-      name   : 'Trash Box',
+      name   : 'Sandbox',
       class  : '',
       wrapper: {
         element   : '',
         attributes: {},
       },
+    },
+    {
+      name : 'lemoncola',
+      url  : '/sandbox/lemoncola',
+      icon : 'icon-fire',
+      badge: {
+        variant: 'danger',
+        text   : 'HOT',
+      },
+      children: [
+        {
+          name: 'サンプルページ',
+          url : '/sandbox/lemoncola/sample',
+          icon: 'icon-magic-wand',
+        },
+      ],
     },
     /*
     {
