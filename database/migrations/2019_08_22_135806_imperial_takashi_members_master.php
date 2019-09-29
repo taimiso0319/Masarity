@@ -13,15 +13,11 @@ class ImperialTakashiMembersMaster extends Migration
      */
     public function up()
     {
-        Scheme::create('imperial_takashi_members_master', function(Blueprint $table){
+        Schema::create('imperial_takashi_members_master', function(Blueprint $table){
             $table->increments('id');
-            $table->string('name');
-            $table->string('description');
-            $table->string('steamProfileUrl');
+            $table->string('steamId64')->nullable();
             $table->string('twitterId');
-            $table->string('twitterBannerUrl');
-            $table->string('twitterThumbnailUrl');
-            $table->string('youtubeChannelUrl');
+            $table->string('youtubeChannelId')->nullable();
             $table->timestamps();
         });
     }
