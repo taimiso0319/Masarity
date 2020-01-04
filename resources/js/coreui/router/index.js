@@ -17,6 +17,7 @@ import Register from '@/views/pages/Register'
 // Sample route
 import sample from './sample'
 import main from './main'
+import sandbox from './sandbox'
 
 Vue.use(Router)
 
@@ -40,7 +41,11 @@ export default new Router({
       path     : '/',
       name     : 'Dashboard',
       component: Full,
-      children : [...sample, ...main],
+      children : [
+        ...sample,
+        ...main,
+        ...sandbox,
+      ],
     },
     {
       path     : '/pages',
