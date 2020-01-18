@@ -48,24 +48,24 @@ mix.webpackConfig({
   ],
 })
 
-mix.extend('vueOptions', (webpackConfig, vueOptions, ...arguments_) => {
-  const vueLoader = webpackConfig.module.rules.find((loader) => loader.loader === 'vue-loader')
-
-  vueLoader.options = require('webpack-merge').smart(vueLoader.options, vueOptions)
-})
-
-mix.vueOptions({
-  transformToRequire: {
-    'img'             : 'src',
-    'image'           : 'xlink:href',
-    'b-img'           : 'src',
-    'b-img-lazy'      : ['src', 'blank-src'],
-    'b-card'          : 'img-src',
-    'b-card-img'      : 'img-src',
-    'b-carousel-slide': 'img-src',
-    'b-embed'         : 'src',
-  },
-})
+// mix.extend('vueOptions', (webpackConfig, vueOptions, ...arguments_) => {
+//   const vueLoader = webpackConfig.module.rules.find((loader) => loader.loader === 'vue-loader')
+//
+//   vueLoader.options = require('webpack-merge').smart(vueLoader.options, vueOptions)
+// })
+//
+// mix.vueOptions({
+//   transformToRequire: {
+//     'img'             : 'src',
+//     'image'           : 'xlink:href',
+//     'b-img'           : 'src',
+//     'b-img-lazy'      : ['src', 'blank-src'],
+//     'b-card'          : 'img-src',
+//     'b-card-img'      : 'img-src',
+//     'b-carousel-slide': 'img-src',
+//     'b-embed'         : 'src',
+//   },
+// })
 
 mix.extract([
   'axios',
