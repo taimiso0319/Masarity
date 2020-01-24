@@ -17,10 +17,5 @@
     "Vue": true,
     "CONFIG": true,
     "__VERSION": true
-  },
-  "rules": {
-    "vue/html-self-closing": [
-      "never"
-    ]
   }
 }
