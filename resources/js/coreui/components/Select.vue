@@ -5,8 +5,8 @@
 </template>
 
 <script>
-import { isArray } from 'bootstrap-vue/es/utils/array'
-import { keys } from 'bootstrap-vue/es//utils/object'
+import { isArray } from 'bootstrap-vue/esm/utils/array'
+import { keys } from 'bootstrap-vue/esm/utils/object'
 
 function isObject (object) {
   return object && ({}).toString.call(object) === '[object Object]'
