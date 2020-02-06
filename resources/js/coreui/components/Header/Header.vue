@@ -22,11 +22,14 @@
       <b-nav-item href="https://colopl.co.jp/alicegearaegis/" target="_blank" class="px-2">
           <b-img class="app-icons rounded" src="https://colopl.co.jp/alicegearaegis/portal/img/common/ft_icon.jpg"/>
       </b-nav-item>
-      <b-nav-item href="https://apps.pmang.jp/browndust" target="_blank" class="px-2">
-          <b-img class="app-icons rounded" src="https://review.game-apps.info/wp-content/uploads/2019/05/icon_browndust.jpg"/>
-      </b-nav-item>
-      <b-nav-item  href=" https://www.arknights.global/" target="_blank" class="px-2">
+      <b-nav-item  href="https://www.arknights.jp/" target="_blank" class="px-2">
         <b-img class="app-icons rounded" src="https://is4-ssl.mzstatic.com/image/thumb/Purple113/v4/ea/90/08/ea900885-4fdb-bd08-b7cb-e04a72113ad4/AppIcon-0-0-1x_U007emarketing-0-0-0-9-0-85-220.png/230x0w.png"/>
+      </b-nav-item>
+      <b-nav-item  href="https://www.supermechachampions.com/jp/" target="_blank" class="px-2">
+        <b-img class="app-icons rounded" src="https://pbs.twimg.com/profile_images/1149213400548777985/zshQDjjP_400x400.png"/>
+      </b-nav-item>
+      <b-nav-item href="https://apps.pmang.jp/browndust" target="_blank" class="px-2">
+        <b-img class="app-icons rounded" src="https://review.game-apps.info/wp-content/uploads/2019/05/icon_browndust.jpg"/>
       </b-nav-item>
       <b-nav-item  href="https://colopl.co.jp/panipani/" target="_blank" class="px-2">
         <b-img class="app-icons rounded" src="https://pbs.twimg.com/profile_images/905682957532225536/KoCd3GQR_400x400.jpg"/>
