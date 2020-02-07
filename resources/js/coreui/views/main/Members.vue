@@ -59,7 +59,7 @@ export default {
         },
         {
           name        : 'garsy',
-          bannerUrl   : '',
+          bannerUrl   : 'https://pbs.twimg.com/profile_banners/404746959/1562225944/600x200',
           thumbnailUrl: 'https://pbs.twimg.com/profile_images/877180857483542529/eRgb6qOK_200x200.jpg',
           twitterUrl  : 'https://twitter.com/garsyskoudon',
           steamUrl    : 'https://steamcommunity.com/profiles/76561197998985189',
@@ -92,8 +92,8 @@ export default {
         {
           name        : '斎藤',
           bannerUrl   : 'https://pbs.twimg.com/profile_banners/76562029/1544538096/600x200',
-          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1127775773614469120/-nhCUaiv_200x200.jpg',
-          twitterUrl  : 'https://twitter.com/lonelygravity',
+          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1203645229942730753/ICYKOD3W_200x200.jpg',
+          twitterUrl  : 'https://twitter.com/22dunk',
           steamUrl    : 'https://steamcommunity.com/id/saidah',
           youtubeUrl  : 'https://www.youtube.com/channel/UCwUkTc0dFAQbGw9_zLRBryQ',
           description : 'アイカランバ',
@@ -108,11 +108,27 @@ export default {
         },
         {
           name        : 'slowly',
-          bannerUrl   : 'https://pbs.twimg.com/profile_banners/63148409/1541844266/600x200',
+          bannerUrl   : 'https://pbs.twimg.com/profile_banners/63148409/1563621707/600x200',
           thumbnailUrl: 'https://pbs.twimg.com/profile_images/1127007200440770560/IZnYXB91_200x200.jpg',
           twitterUrl  : 'https://twitter.com/wanibuchi_',
           steamUrl    : 'https://steamcommunity.com/id/age53',
           description : 'steam/🐴/SR400/💣',
+        },
+        {
+          name        : 'NIKI',
+          bannerUrl   : 'https://pbs.twimg.com/profile_banners/199664648/1516121529/600x200',
+          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1215262253613645824/iFVs8VwK_200x200.png',
+          twitterUrl  : 'https://twitter.com/riceandgohan',
+          steamUrl    : 'https://steamcommunity.com/id/Cazzoro',
+          description : '映画, サイクリング, PCゲーム, 根暗.',
+        },
+        {
+          name        : 'かしわざき',
+          bannerUrl   : 'https://pbs.twimg.com/profile_banners/69238685/1472393241/600x200',
+          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1062725471379439616/g_UiY6Nq_200x200.jpg',
+          twitterUrl  : 'https://twitter.com/kashiwazaki46',
+          steamUrl    : 'https://steamcommunity.com/id/kugyuuuu',
+          description : 'ゲーム、車、バイク、自転車が好きです。サバゲーもやってます。バイク：2004年YZF-R1 デジタル一眼レフカメラ：α550 ツーリングやサバゲーのお誘い待ってます＾＾ｖ /水樹奈々/田村ゆかり/Tokyo 7th シスターズ',
         },
         {
           name        : '翌週',
@@ -134,7 +150,7 @@ export default {
         {
           name        : 'くれてぃ',
           bannerUrl   : 'https://pbs.twimg.com/profile_banners/67184670/1535638049/600x200',
-          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1097087025688133633/LW1RhFsj_200x200.png',
+          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1211909841205129216/qH737BdD_200x200.png',
           twitterUrl  : 'https://twitter.com/Kurety',
           steamUrl    : 'https://steamcommunity.com/profiles/76561197992033839',
           description : 'このアイコンはくまみね様(@kumamine)の作品の電話猫です',
@@ -150,7 +166,7 @@ export default {
         {
           name        : '八神・R・陽奈',
           bannerUrl   : 'https://pbs.twimg.com/profile_banners/1029658856467574785/1556747403/600x200',
-          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1123706125835227138/eCo67Nd3_200x200.jpg',
+          thumbnailUrl: 'https://pbs.twimg.com/profile_images/1202430553217126406/zN0ELq0x_200x200.jpg',
           twitterUrl  : 'https://twitter.com/yagami407',
           youtubeUrl  : 'https://www.youtube.com/channel/UCRCKmnkNgfSJnYbzie4LZ0w',
           description : '新人Vtuberの八神・R・陽奈です！これから頑張ります！乾坤一擲！',
