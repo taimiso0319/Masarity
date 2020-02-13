@@ -5,10 +5,10 @@ import Router from 'vue-router'
 import Full from '@/containers/Full'
 
 // Views
-import Dashboard from '@/views/sample/Dashboard'
+// import Dashboard from '@/views/sample/Dashboard'
 
 // Views - Pages
-import Entrance from '@/views/main/Entrance'
+// import Entrance from '@/views/main/Entrance'
 import Page404 from '@/views/pages/Page404'
 import Page500 from '@/views/pages/Page500'
 import Login from '@/views/pages/Login'
@@ -26,20 +26,21 @@ export default new Router({
   linkActiveClass: 'open active',
   scrollBehavior : () => ({ y: 0 }),
   routes         : [
+    // {
+    //   path     : '/',
+    //   component: Entrance,
+    //   children : [
+    //     {
+    //       path     : '/entrance',
+    //       name     : 'Entrance',
+    //       component: Entrance,
+    //     },
+    //   ],
+    // },
     {
       path     : '/',
-      component: Entrance,
-      children : [
-        {
-          path     : '/entrance',
-          name     : 'Entrance',
-          component: Entrance,
-        },
-      ],
-    },
-    {
-      path     : '/',
-      name     : 'Dashboard',
+      name     : 'Home',
+      redirect : '/members',
       component: Full,
       children : [
         ...sample,
