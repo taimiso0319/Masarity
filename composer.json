@@ -6,6 +6,7 @@
   "type": "project",
   "require": {
     "php": "^7.2",
+    "abraham/twitteroauth": "^1.1",
     "barryvdh/laravel-ide-helper": "^2.6",
     "caseyamcl/guzzle_retry_middleware": "^2.2",
     "fideloper/proxy": "^4.0",
