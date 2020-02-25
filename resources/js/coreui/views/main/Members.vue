@@ -18,6 +18,9 @@
 
 <script>
 import { MemberProfileCard } from '../../components'
+import { RepositoryFactory } from '../../../utils/repositories/repository-factory'
+
+const membersRepository = RepositoryFactory.get('members')
 
 export default {
   name      : 'Members',
