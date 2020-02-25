@@ -9,6 +9,6 @@ class ImperialTakashiMember extends Model
     protected $table = 'imperial_takashi_members_master';
 
     public function get(){
-
+        return DB::table($this->table)->get();
     }
 }
