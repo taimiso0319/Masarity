@@ -34,7 +34,13 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
-
+    'twitter' => [
+        'profile_base_url' => 'https://twitter.com/i/user/',
+        'consumer_key' => env('TWITTER_CONSUMER_KEY'),
+        'consumer_secret' => env('TWITTER_CONSUMER_SECRET'),
+        'access_token' => env('TWITTER_ACCESS_TOKEN'),
+        'access_token_secret' => env('TWITTER_ACCESS_TOKEN_SECRET'),
+    ]
     // 'api'       => [
     //     'url'      => env('API_URL'),
     //     'username' => env('API_USERNAME'),
