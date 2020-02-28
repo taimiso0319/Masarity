@@ -6,6 +6,7 @@ namespace App\Http\Utils\Validation;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Http\Exceptions\HttpResponseException;
+use Illuminate\Validation\ValidationException;
 
 class ImperialTakashiMembersRequest extends FormRequest
 {
@@ -13,27 +14,27 @@ class ImperialTakashiMembersRequest extends FormRequest
     {
         // 各種パラメーターをにする。ただし、arrayでリクエストされた場合はそのまま。
         $this->merge([
-            'part' => array_unique(is_array($this->part) === true ? $this->part : explode(',', $this->part)),
-            'id' => array_unique(is_array($this->id) === true ? $this->id : explode(',',$this->id))
+            'part' => $this->part !== null ? array_unique(is_array($this->part) === true ? $this->part : explode(',', $this->part)) : null,
+            'id' => $this->id !== null ? array_unique(is_array($this->id) === true ? $this->id : explode(',',$this->id)) : null
         ]);
     }
 
     public function rules()
     {
         return [
-            'part' => 'array',
-            'part.*' => 'in:snippet',
-            'id' => 'array|max:20|integer',
+            'part' => 'required|array|nullable',
+            'part.*' => 'in:snippet,twitter,steam,vrchat',
+            'id' => 'array|max:20|nullable',
         ];
     }
 
     public function messages()
     {
         return [
-            'part.alpha' => 'The part(s) has to be alphabet array.',
-            'part.in' => 'Unknown part',
+            'part.required' => 'You have to set the part(s).',
+            //'part.alpha' => 'The part(s) has to be alphabet array.',
+            'part.*.in' => 'Unknown part',
             'id.max' => 'You can request ids up to 20.',
-            'id.integer' => 'The id(s) has to be integer.'
         ];
     }
 
