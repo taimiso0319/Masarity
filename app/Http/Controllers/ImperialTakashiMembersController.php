@@ -87,7 +87,7 @@ class ImperialTakashiMembersController extends Controller
                 $response[$i]->twitter->name = $twitterData[$i]->name;
                 $response[$i]->twitter->screen_name = $twitterData[$i]->screen_name;
                 $response[$i]->twitter->description = $twitterData[$i]->description;
-                $response[$i]->twitter->profile_banner_url = $twitterData[$i]->profile_banner_url;
+                $response[$i]->twitter->profile_banner_url = property_exists($twitterData[$i],'profile_banner_url') ? $twitterData[$i]->profile_banner_url : null;
                 $response[$i]->twitter->profile_image_url_https = $twitterData[$i]->profile_image_url_https;
             }
         }

@@ -4,6 +4,6 @@ const resource = '/members'
 
 export default {
   getMembers () {
-    return Repository.get(`${resource}?part=snippet`)
+    return Repository.get(`${resource}?part=snippet,twitter`)
   },
 }
