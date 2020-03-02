@@ -37,7 +37,7 @@ export default {
     makeTwitterBannerUrl: function (value) {
       if (value !== null)
         return `${value}/600x200`
-      return null
+      return `https://pbs.twimg.com/profile_banners/800415710040076288/1548306383/600x200`
     },
     makeYouTubeUrl: function (value) {
       if (value !== null)
@@ -75,7 +75,6 @@ export default {
       const { data } = await membersRepository.getMembers()
       this.isLoading = false
       this.profiles  = data
-      console.log(data)
     },
   },
 }
