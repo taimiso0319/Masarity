@@ -50,7 +50,7 @@ export default {
     bannerUrl   : String,
     twitterUrl  : String,
     steamUrl    : String,
-    youtubeUrl : String,
+    youtubeUrl  : String,
     name        : String,
     description : String,
   },
@@ -85,7 +85,7 @@ export default {
       max-width: 100%;
       border-radius: 50%;
       margin-top: -95px;
-      margin-bottom: 35px;
+      margin-bottom: 25px;
       border: 5px solid $card-bg;
     }
 
@@ -93,7 +93,7 @@ export default {
       margin-bottom: 50px;
 
       small {
-        min-height: 30px;
+        min-height: 54px;
         display: block;
         font-size: .6em;
         margin-top: .2em;
