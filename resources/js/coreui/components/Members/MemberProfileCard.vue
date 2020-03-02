@@ -90,7 +90,7 @@ export default {
     }
 
     .card-title {
-      margin-bottom: 50px;
+      margin-bottom: 36px;
 
       small {
         min-height: 54px;
