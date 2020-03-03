@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.com/adenvt/laravel-coreui-vue.svg?branch=master)](https://travis-ci.com/adenvt/laravel-coreui-vue) [![Greenkeeper badge](https://badges.greenkeeper.io/adenvt/laravel-coreui-vue.svg)](https://greenkeeper.io/)
 
 ## What's inside
-* [Laravel][laravel] 5.8, A PHP framework for web artisans
+* [Laravel][laravel] 6.x, A PHP framework for web artisans
 * [Core UI][coreui] for Vue, Free Bootstrap Admin Template
 * Usefull library: [Axios][axios], [jQuery][jquery], [Moment.js][moment], [Lodash][lodash]
 * [Vue Router][vue-router] and [Vuex][vuex], set out of the box
