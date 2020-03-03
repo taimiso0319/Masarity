@@ -72,10 +72,6 @@ mix.extract([
 
 mix.options({
   clearConsole: false,
-  hmrOptions  : {
-    host: process.env.MIX_HMR_HOST,
-    port: process.env.MIX_HMR_PORT,
-  },
   terser: { terserOptions: { parallel: true } },
 })
 
