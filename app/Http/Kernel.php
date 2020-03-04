@@ -42,7 +42,7 @@ class Kernel extends HttpKernel
             'throttle:60,1',
             'bindings',
         ],
-
+        /*
         'speed' => [
             // Laravel Page Speed
             \RenatoMarinho\LaravelPageSpeed\Middleware\InlineCss::class,
@@ -53,6 +53,7 @@ class Kernel extends HttpKernel
             \RenatoMarinho\LaravelPageSpeed\Middleware\RemoveQuotes::class,
             \RenatoMarinho\LaravelPageSpeed\Middleware\CollapseWhitespace::class,
         ],
+        */
     ];
 
     /**

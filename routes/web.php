@@ -12,5 +12,5 @@
 */
 
 Route::get('/{vue_capture?}', 'AppController@index')
-    ->middleware(['speed'])
+    #->middleware(['speed'])
     ->where('vue_capture', '[\/\w\.\,\-]*');
