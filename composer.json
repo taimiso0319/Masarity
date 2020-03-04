@@ -5,17 +5,16 @@
   "license": "MIT",
   "type": "project",
   "require": {
-    "php": "^7.2",
+    "php": "^7.2.5",
     "abraham/twitteroauth": "^1.1",
     "barryvdh/laravel-ide-helper": "^2.6",
     "caseyamcl/guzzle_retry_middleware": "^2.2",
     "fideloper/proxy": "^4.0",
     "guzzlehttp/guzzle": "^6.3",
-    "laravel/framework": "^6.16",
+    "laravel/framework": "^7.0",
     "laravel/helpers": "^1.1",
     "laravel/passport": "^8.4",
-    "laravel/tinker": "^1.0",
-    "renatomarinho/laravel-page-speed": "^1.8",
+    "laravel/tinker": "^2.0",
     "thujohn/twitter": "^2.2"
   },
   "require-dev": {
@@ -23,8 +22,8 @@
     "filp/whoops": "^2.0",
     "fzaninotto/faker": "^1.4",
     "mockery/mockery": "^1.0",
-    "nunomaduro/collision": "^2.0",
-    "phpunit/phpunit": "^7.0"
+    "nunomaduro/collision": "^4.1",
+    "phpunit/phpunit": "^8.5"
   },
   "autoload": {
     "classmap": [
