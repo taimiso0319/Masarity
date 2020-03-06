@@ -30,38 +30,24 @@ export default {
       return value.replace('_normal', '_200x200')
     },
     makeTwitterIconUrl: function (value) {
-      if (value !== null)
-        return `https://twitter.com/i/user/${value}`
+      if (value !== null) return `https://twitter.com/i/user/${value}`
       return null
     },
     makeTwitterBannerUrl: function (value) {
-      if (value !== null)
-        return `${value}/600x200`
+      if (value !== null) return `${value}/600x200`
       return `https://pbs.twimg.com/profile_banners/800415710040076288/1548306383/600x200`
     },
     makeYouTubeUrl: function (value) {
-      if (value !== null)
-        return `https://www.youtube.com/channel/${value}`
+      if (value !== null) return `https://www.youtube.com/channel/${value}`
       return null
     },
     makeSteamUrl: function (value) {
-      if (value !== null)
-        return `http://steamcommunity.com/profiles/${value}`
+      if (value !== null) return `http://steamcommunity.com/profiles/${value}`
       return null
     },
   },
   data: function () {
     return {
-      // profiles: [
-      //   {
-      //     name        : 'Masarity',
-      //     bannerUrl   : 'https://pbs.twimg.com/profile_banners/60210710/1557398049/600x200',
-      //     thumbnailUrl: 'https://pbs.twimg.com/profile_images/1131708581127041024/_wd1owWT_200x200.png',
-      //     twitterUrl  : 'https://twitter.com/masarity',
-      //     steamUrl    : 'https://steamcommunity.com/profiles/76561197994736871',
-      //     description : 'インペリアルたかし💣',
-      //   },
-      // ],
       profiles : null,
       isLoading: false,
     }
