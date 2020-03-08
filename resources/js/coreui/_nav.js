@@ -19,13 +19,18 @@ export default {
       },
     },
     {
-      name : 'History',
-      url  : '/history',
-      icon : 'icon-film',
-      badge: {
-        variant: 'danger',
-        text   : 'WIP',
+      title  : true,
+      name   : 'FanPages',
+      class  : '',
+      wrapper: {
+        element   : '',
+        attributes: {},
       },
+    },
+    {
+      name: 'なずチャンネル',
+      url : '/fan/nazuna',
+      icon: 'icon-social-youtube',
     },
     {
       title  : true,

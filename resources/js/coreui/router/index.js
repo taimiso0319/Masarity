@@ -17,6 +17,7 @@ import Register from '@/views/pages/Register'
 // Sample route
 import sample from './sample'
 import main from './main'
+import fan from './fan'
 import sandbox from './sandbox'
 
 Vue.use(Router)
@@ -45,6 +46,7 @@ export default new Router({
       children : [
         ...sample,
         ...main,
+        ...fan,
         ...sandbox,
       ],
     },
