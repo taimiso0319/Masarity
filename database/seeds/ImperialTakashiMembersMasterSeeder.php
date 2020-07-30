@@ -70,13 +70,13 @@ class ImperialTakashiMembersMasterSeeder extends Seeder
                 'created_at' =>  $now,
                 'updated_at' => $now
             ],
-            [
-                'steamId64' => '76561197999711251', // saidah
-                'twitterId' => '76562029',
-                'youtubeChannelId' => 'UCwUkTc0dFAQbGw9_zLRBryQ',
-                'created_at' =>  $now,
-                'updated_at' => $now
-            ],
+            //[
+            //    'steamId64' => '76561197999711251', // saidah
+            //    'twitterId' => '76562029',
+            //    'youtubeChannelId' => 'UCwUkTc0dFAQbGw9_zLRBryQ',
+            //    'created_at' =>  $now,
+            //    'updated_at' => $now
+            //],
             [
                 'steamId64' => '76561198006312486', // tempura
                 'twitterId' => '73926048',
