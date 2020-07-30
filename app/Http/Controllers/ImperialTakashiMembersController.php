@@ -79,7 +79,7 @@ class ImperialTakashiMembersController extends Controller
 
         for ($i = 0, $iMax = count($response); $i < $iMax; $i++){
             if($twitterData !== null){
-                if($membersData[$i] === null){
+                if($response[$i]->twitter === null){
                     continue;
                 }
                 if($membersData[$i]-> twitterId === null){
