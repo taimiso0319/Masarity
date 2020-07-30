@@ -79,11 +79,11 @@ class ImperialTakashiMembersController extends Controller
 
         for ($i = 0, $iMax = count($response); $i < $iMax; $i++){
             if($twitterData !== null){
-                if($twitterData[$i] === null){
-                    continue;
-                }
                 if($membersData[$i]-> twitterId === null){
                     // idが空だったらスキップ
+                    continue;
+                }
+                if($twitterData[$i]->name === null){
                     continue;
                 }
                 $response[$i]->twitter = new \stdClass();
