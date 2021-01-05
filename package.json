@@ -59,7 +59,7 @@
   "dependencies": {
     "ajv": "^6.11.0",
     "animate.css": "^3.7.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.4.1",
     "caniuse-lite": "^1.0.30001027",
